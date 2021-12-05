@@ -1,5 +1,4 @@
 import telebot
-import sqlite3
 from forex_python.converter import CurrencyRates
 import requests as r
 
@@ -92,11 +91,11 @@ def infot(message) -> None:
     '''
 
     keyboard = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
-    keyboard.row('Cписок преподаватлей ', 'EUR RUB', 'GBP RUB')
-    keyboard.row('USD GBP', 'EUR GBP', 'EUR USD')
+    keyboard.row('Cписок преподаватлей ', 'Площадка проведения занятий', )
+    keyboard.row('Профиль на Сайте ВШЭ')
 
     bot.send_message(
-        message.chat.id, f'<b>{message.from_user.username}</b>, выберите интересующую вас валютную пару для перевода или впишите свою 🤩 \n\n Пример <b>EUR USD</b>', reply_markup=keyboard)
+        message.chat.id, f'<b>{message.from_user.first_name}</b>, выберите интересующую вас информацию 🤩', reply_markup=keyboard)
     bot.register_next_step_handler(message, teacherinf)
 
 
