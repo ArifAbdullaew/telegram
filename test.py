@@ -1,6 +1,4 @@
 import telebot
-from forex_python.converter import CurrencyRates
-import requests as r
 from telebot import types
 
 bot = telebot.TeleBot(
