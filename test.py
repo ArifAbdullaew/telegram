@@ -6,7 +6,8 @@ from project import date
 from project import subject
 from project import infot
 from project import profile
-
+from project import ploshad
+from project import infos
 
 class projecttest(unittest.TestCase):
     main_keyboard = [
@@ -21,6 +22,12 @@ class projecttest(unittest.TestCase):
         ['Площадка проведения занятий💻'],
         ['Профили на сайте ВШЭ📱'],
     ]
+    
+    def test_infos(self):
+        self.assertEqual(profile(''), 'error')
+    
+    def test_ploshad(self):
+        self.assertNotEqual(profile('площадка'),'\n\nМат. Анализ, Физика Лекция, Информатика - MS Teams\n\nФизика Семинар - Google Meet\n\nАиП Лекции - Even Webinar\n\nАиП Семинар - Meet Miem')
     
     def test_profile(self):
         self.assertEqual(profile(''),'error')
