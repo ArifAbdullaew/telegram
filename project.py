@@ -2,7 +2,7 @@ import telebot
 from telebot import types
 
 bot = telebot.TeleBot(
-    '5097652539:AAFzQpvariYOIC8u70rSCzB1uRZ3CkpllYk', parse_mode='html')
+    'what you need here?', parse_mode='html')
 
 COMMANDS = ['start', 'infos', 'infot', 'subject',
             'date', 'starosta', 'spisok', 'ploshad', 'profile']
