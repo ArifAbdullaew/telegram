@@ -3,7 +3,7 @@ import telebot
 from telebot import types
 
 bot = telebot.TeleBot(
-    '5097652539:AAFzQpvariYOIC8u70rSCzB1uRZ3CkpllYk', parse_mode='html')
+    'secret', parse_mode='html')
 
 COMMANDS = ['start', 'infos', 'infot', 'subject',
             'date', 'starosta', 'spisok', 'ploshad', 'profile']
@@ -89,6 +89,9 @@ def globalkey() -> telebot.types.ReplyKeyboardMarkup:
 
 
 def date(message) -> None:
+    '''
+        Функция, на которую выдаем дисциплины .
+    '''
     try:
         keyboard = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
         keyboard.row('Возвращаемся обратно 🚀 ')
@@ -99,6 +102,9 @@ def date(message) -> None:
 
 
 def infos(message) -> None:
+    '''
+        Функция, на которую выдаем список группы .
+    '''
     try:
         keyboard = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
         keyboard.row('Возвращаемся обратно 🚀 ')
@@ -108,6 +114,9 @@ def infos(message) -> None:
 
 
 def starosta(message) -> None:
+    '''
+        Функция, на которую выдаем старосты .
+    '''
     try:
         keyboard = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
         keyboard.row('Возвращаемся обратно 🚀 ')
@@ -131,6 +140,9 @@ def infot(message) -> None:
 
 
 def spisok(message) -> None:
+    '''
+        Функция, на которую выдает список учителей .
+    '''
     try:
         keyboard = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
         keyboard.row('Возвращаемся обратно 🚀 ')
@@ -140,6 +152,9 @@ def spisok(message) -> None:
 
 
 def ploshad(message) -> None:
+    '''
+        Функция, на которую выдает список платформ .
+    '''
     try:
         keyboard = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
         keyboard.row('Возвращаемся обратно 🚀 ')
@@ -149,6 +164,9 @@ def ploshad(message) -> None:
 
 
 def profile(message) -> None:
+    '''
+        Функция, на которую выдает сайт с  преподваталеями .
+    '''
     try:
         keyboard = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
         keyboard.row('Возвращаемся обратно 🚀 ')
@@ -159,6 +177,9 @@ def profile(message) -> None:
 
 
 def subject(message) -> None:
+    '''
+        Функция, на которую выдает список дисциплин .
+    '''
     try:
         keyboard = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
         bot.send_message(message.chat.id, f'\nМатематический Анализ\n\nИнформатика\n\nАлгоритмизация и Программирование\n\nПроектный семинар по Информационной безопасности\n\nКомпьютерный практикум Администрирование систем и сетей\n\nФизика\n\nИстория', reply_markup=keyboard)
