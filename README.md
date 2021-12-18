@@ -15,14 +15,7 @@ cd telegram
 ``` bash
 python3 -m pip install -r requirements.txt
 ```
-4) Далее нужно создать файл `const.py` в корневой директории со следующим содержанием
-``` python
-TOKEN = '<ваш токен>'
-```
-5) Запускаем
-``` bash
-python3 projectArif.py
-```
+
 ## Запуск тестов
 ``` bash
 python3 testArif.py
