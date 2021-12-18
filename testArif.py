@@ -100,5 +100,5 @@ class telegrambot_test(unittest.TestCase):
         ret = f'<b>{name}</b>, https://www.hse.ru/ba/is/tutors'
         bot.send_message.assert_called_with(123, ret, reply_markup=any) 
 
-if __name__ == "__main__":
-    unittest.main()
+if __name__=="__main__":
+    MagicMock.init() 
