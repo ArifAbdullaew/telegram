@@ -162,5 +162,5 @@ def error(message):
     bot.send_message(
         message.chat.id, "\nНу тут мои полномочия все \n тут уж извините, но все ")
 
-
-bot.polling()
+if __name__=="__main__":
+    bot.polling()
