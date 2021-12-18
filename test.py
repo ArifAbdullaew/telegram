@@ -6,7 +6,7 @@ import time
 
 
 
-# Your API ID, hash and session string here
+#Вот сюда Апи и Хэщ
 api_id = int('')
 api_hash = ""
 client = TelegramClient('session_name', api_id, api_hash)
