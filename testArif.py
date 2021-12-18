@@ -18,7 +18,7 @@ class telegrambot_test(unittest.TestCase):
     def test_start(self):
         try:
             client.send_message('@hsemiembib211_bot', 'start')
-            time.sleep(2)
+            time.sleep(1)
             messages = client.get_messages('@hsemiembib211_bot')
             for message in client.get_messages('@hsemiembib211_bot', limit=1):
                 m = message.message
@@ -31,7 +31,7 @@ class telegrambot_test(unittest.TestCase):
     def test_infos(self):
         try:
             client.send_message('@hsemiembib211_bot', 'А с кем я учусь?🤔')
-            time.sleep(2)
+            time.sleep(1)
             messages = client.get_messages('@hsemiembib211_bot')
             for message in client.get_messages('@hsemiembib211_bot', limit=1):
                 m = message.message
@@ -44,7 +44,7 @@ class telegrambot_test(unittest.TestCase):
     def test_subject(self):
         try:
             client.send_message('@hsemiembib211_bot', 'Мои Дисциплины📖')
-            time.sleep(2)
+            time.sleep(1)
             messages = client.get_messages('@hsemiembib211_bot')
             for message in client.get_messages('@hsemiembib211_bot', limit=1):
                 m = message.message
@@ -58,7 +58,7 @@ class telegrambot_test(unittest.TestCase):
         try:
             client.send_message('@hsemiembib211_bot',
                                 'Может начать готовиться к сессии?😴')
-            time.sleep(2)
+            time.sleep(1)
             messages = client.get_messages('@hsemiembib211_bot')
             for message in client.get_messages('@hsemiembib211_bot', limit=1):
                 m = message.message
@@ -71,7 +71,7 @@ class telegrambot_test(unittest.TestCase):
     def test_spisok(self):
         try:
             client.send_message('@hsemiembib211_bot', 'Cписок преподавателей🧾')
-            time.sleep(2)
+            time.sleep(1)
             messages = client.get_messages('@hsemiembib211_bot')
             for message in client.get_messages('@hsemiembib211_bot', limit=1):
                 m = message.message
@@ -85,7 +85,7 @@ class telegrambot_test(unittest.TestCase):
         try:
             client.send_message('@hsemiembib211_bot',
                                 'Площадка проведения занятий💻')
-            time.sleep(2)
+            time.sleep(1)
             messages = client.get_messages('@hsemiembib211_bot')
             for message in client.get_messages('@hsemiembib211_bot', limit=1):
                 m = message.message
@@ -98,7 +98,7 @@ class telegrambot_test(unittest.TestCase):
     def test_profile(self):
         try:
             client.send_message('@hsemiembib211_bot', 'Профили на сайте ВШЭ📱')
-            time.sleep(2)
+            time.sleep(1)
             messages = client.get_messages('@hsemiembib211_bot')
             for message in client.get_messages('@hsemiembib211_bot', limit=1):
                 m = message.message
@@ -112,7 +112,7 @@ class telegrambot_test(unittest.TestCase):
         try:
             client.send_message('@hsemiembib211_bot',
                                 'Возвращаемся обратно 🚀 ')
-            time.sleep(2)
+            time.sleep(1)
             messages = client.get_messages('@hsemiembib211_bot')
             for message in client.get_messages('@hsemiembib211_bot', limit=1):
                 m = message.message
