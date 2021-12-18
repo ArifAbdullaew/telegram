@@ -5,13 +5,10 @@ import unittest
 import time
 
 
-
-#Вот сюда Апи и Хэщ
+# Вот сюда Апи и Хэщ
 api_id = int('')
 api_hash = ""
 client = TelegramClient('session_name', api_id, api_hash)
-
-
 
 
 client.start()
@@ -30,7 +27,7 @@ class telegrambot_test(unittest.TestCase):
             self.assertRegex(m, text)
         except:
             self.assertFalse(True)
-            
+
     def test_infos(self):
         try:
             client.send_message('@hsemiembib211_bot', 'А с кем я учусь?🤔')
@@ -43,7 +40,7 @@ class telegrambot_test(unittest.TestCase):
             self.assertRegex(m, text)
         except:
             self.assertFalse(True)
-            
+
     def test_subject(self):
         try:
             client.send_message('@hsemiembib211_bot', 'Мои Дисциплины📖')
@@ -56,10 +53,11 @@ class telegrambot_test(unittest.TestCase):
             self.assertRegex(m, text)
         except:
             self.assertFalse(True)
-    
+
     def test_date(self):
         try:
-            client.send_message('@hsemiembib211_bot', 'Может начать готовиться к сессии?😴')
+            client.send_message('@hsemiembib211_bot',
+                                'Может начать готовиться к сессии?😴')
             time.sleep(2)
             messages = client.get_messages('@hsemiembib211_bot')
             for message in client.get_messages('@hsemiembib211_bot', limit=1):
@@ -69,7 +67,7 @@ class telegrambot_test(unittest.TestCase):
             self.assertRegex(m, text)
         except:
             self.assertFalse(True)
-            
+
     def test_spisok(self):
         try:
             client.send_message('@hsemiembib211_bot', 'Cписок преподавателей🧾')
@@ -82,10 +80,11 @@ class telegrambot_test(unittest.TestCase):
             self.assertRegex(m, text)
         except:
             self.assertFalse(True)
-            
+
     def test_ploshad(self):
         try:
-            client.send_message('@hsemiembib211_bot', 'Площадка проведения занятий💻')
+            client.send_message('@hsemiembib211_bot',
+                                'Площадка проведения занятий💻')
             time.sleep(2)
             messages = client.get_messages('@hsemiembib211_bot')
             for message in client.get_messages('@hsemiembib211_bot', limit=1):
@@ -95,7 +94,7 @@ class telegrambot_test(unittest.TestCase):
             self.assertRegex(m, text)
         except:
             self.assertFalse(True)
-            
+
     def test_profile(self):
         try:
             client.send_message('@hsemiembib211_bot', 'Профили на сайте ВШЭ📱')
@@ -108,10 +107,11 @@ class telegrambot_test(unittest.TestCase):
             self.assertRegex(m, text)
         except:
             self.assertFalse(True)
-            
+
     def test_again(self):
         try:
-            client.send_message('@hsemiembib211_bot', 'Возвращаемся обратно 🚀 ')
+            client.send_message('@hsemiembib211_bot',
+                                'Возвращаемся обратно 🚀 ')
             time.sleep(2)
             messages = client.get_messages('@hsemiembib211_bot')
             for message in client.get_messages('@hsemiembib211_bot', limit=1):
