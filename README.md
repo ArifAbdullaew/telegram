@@ -21,11 +21,11 @@ TOKEN = '<ваш токен>'
 ```
 5) Запускаем
 ``` bash
-python3 skelet.py
+python3 projectArif.py
 ```
 ## Запуск тестов
 ``` bash
-python3 test_skelet.py
+python3 testArif.py
 ```
 
 
