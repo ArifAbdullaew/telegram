@@ -6,8 +6,8 @@ import time
 
 
 # Вот сюда Апи и Хэщ
-api_id = int('')
-api_hash = ""
+api_id = int('10445218')
+api_hash = "6fa8da898c1f3285adaa28c8ff5d883d"
 client = TelegramClient('Airf', api_id, api_hash)
 
 
