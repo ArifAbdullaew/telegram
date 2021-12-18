@@ -122,5 +122,6 @@ class telegrambot_test(unittest.TestCase):
         except:
             self.assertFalse(True)
             
-            
-    if __name__ == '__main__'
+           
+        
+        
