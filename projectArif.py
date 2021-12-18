@@ -3,7 +3,7 @@ import telebot
 from telebot import types
 from kluchik import TOKEN
 
-bot = telebot.TeleBot(TOKEN, parse_mode='html')
+bot = telebot.TeleBot('', parse_mode='html')
 
 
 @bot.message_handler(commands=['start'])
