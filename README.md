@@ -29,5 +29,5 @@ python3 test_skelet.py
 ```
 
 
-&copy; Данный проект выполнен студентом группы БИБ211, Абдуллаевом Арифом Биннатовичом. ababdullaew@edu.hse.ru ababdullaew@miem.hse.ru
+&copy; Данный проект выполнил Абдуллаев Ариф Биннатович, студент группы БИБ211 Образовательной программы "Информационная безопасность". ababdullaew@edu.hse.ru ababdullaew@miem.hse.ru
 
