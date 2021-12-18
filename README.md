@@ -21,11 +21,11 @@ TOKEN = '<ваш токен>'
 ```
 5) Запускаем
 ``` bash
-python3 bot.py
+python3 skelet.py
 ```
 ## Запуск тестов
 ``` bash
-python3 tests.py
+python3 test_skelet.py
 ```
 
 
