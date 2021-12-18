@@ -1,2 +1,3 @@
 pyTelegramBotAPI==4.1.1
 Telethon==1.23.0
+MagicMock==3.3
