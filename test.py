@@ -8,7 +8,7 @@ import time
 # Вот сюда Апи и Хэщ
 api_id = int('')
 api_hash = ""
-client = TelegramClient('session_name', api_id, api_hash)
+client = TelegramClient('Airf', api_id, api_hash)
 
 
 client.start()
