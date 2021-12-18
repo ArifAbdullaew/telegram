@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 import telebot
 from telebot import types
+from kluchik import TOKEN
 
-bot = telebot.TeleBot(
-    'token place', parse_mode='html')
-
+bot = telebot.TeleBot(TOKEN, parse_mode='html')
 
 
 
