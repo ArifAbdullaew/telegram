@@ -6,7 +6,6 @@ from kluchik import TOKEN
 bot = telebot.TeleBot(TOKEN, parse_mode='html')
 
 
-
 @bot.message_handler(commands=['start'])
 def start_message(message) -> None:
     '''
@@ -15,6 +14,7 @@ def start_message(message) -> None:
     keyboard = globalkey()
     bot.send_message(message.chat.id, f'<b>{message.from_user.first_name}</b>,  \n\nДанный бот имеет множество различных полезных команд, все они приведены в списке ниже! \n\n/infos - информация о студентах!\n\n/infot - информация о преподавателях\n\n/date - даты ближайших работ!\n\n/subject - набор дисциплин 21/22!\n\n/starosta - Кто является старостой и куратором БИБ211', reply_markup=keyboard)
 
+
 def globalkey() -> telebot.types.ReplyKeyboardMarkup:
     '''
         Функция, возвращающая главные кнопки нашего бота
@@ -22,15 +22,17 @@ def globalkey() -> telebot.types.ReplyKeyboardMarkup:
     try:
         main_keyboard = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
         main_keyboard.row('А с кем я учусь?🤔', 'Мои преподаватели👨')
-        main_keyboard.row('Мои Дисциплины📖', 'Может начать готовиться к сессии?😴')
+        main_keyboard.row('Мои Дисциплины📖',
+                          'Может начать готовиться к сессии?😴')
 
         return main_keyboard
     except:
         return 'error'
-    
+
+
 @bot.message_handler(commands=['infos'])
-@bot.message_handler(content_types=['text'], regexp = 'одногруппники?|студенты|с кем')
-def infos(message) -> None:    
+@bot.message_handler(content_types=['text'], regexp='одногруппники?|студенты|с кем')
+def infos(message) -> None:
     '''
         Функция, на которую выдаем список группы .
     '''
@@ -41,8 +43,9 @@ def infos(message) -> None:
     except:
         return 'error'
 
-@bot.message_handler(commands=['date'])   
-@bot.message_handler(content_types=['text'], regexp = 'сессии')
+
+@bot.message_handler(commands=['date'])
+@bot.message_handler(content_types=['text'], regexp='сессии')
 def date(message) -> None:
     '''
         Функция, на которую выдаем дисциплины .
@@ -55,8 +58,9 @@ def date(message) -> None:
     except:
         return 'error'
 
+
 @bot.message_handler(commands=['again'])
-@bot.message_handler(content_types=['text'], regexp = 'обратно|начало')
+@bot.message_handler(content_types=['text'], regexp='обратно|начало')
 def again(message) -> None:
     '''
         Функция, возврата .
@@ -67,8 +71,9 @@ def again(message) -> None:
     except:
         return 'error'
 
+
 @bot.message_handler(commands=['subject'])
-@bot.message_handler(content_types=['text'], regexp = 'предмет|пред|дисциплины')
+@bot.message_handler(content_types=['text'], regexp='предмет|пред|дисциплины')
 def subject(message) -> None:
     '''
         Функция, на которую выдает список дисциплин .
@@ -79,8 +84,9 @@ def subject(message) -> None:
     except:
         return 'error'
 
+
 @bot.message_handler(commands=['infot'])
-@bot.message_handler(content_types=['text'], regexp = 'преподаватели')
+@bot.message_handler(content_types=['text'], regexp='преподаватели')
 def infot(message) -> None:
     '''
         Функция, на которой мы страшиваем у пользователя, что конерктно надо .
@@ -91,11 +97,12 @@ def infot(message) -> None:
         keyboard1.row('Профили на сайте ВШЭ📱')
         bot.send_message(
             message.chat.id, f'<b>{message.from_user.first_name}</b>, что вы желаете?', reply_markup=keyboard1)
-    except: 
+    except:
         return 'error'
 
-@bot.message_handler(commands=['starosta'])   
-@bot.message_handler(content_types=['text'], regexp = 'зам|стар|староста|куратор|кураторы|курат')
+
+@bot.message_handler(commands=['starosta'])
+@bot.message_handler(content_types=['text'], regexp='зам|стар|староста|куратор|кураторы|курат')
 def starosta(message) -> None:
     '''
         Функция, на которую выдаем старосты .
@@ -107,8 +114,9 @@ def starosta(message) -> None:
     except:
         return 'error'
 
+
 @bot.message_handler(commands=['spisok'])
-@bot.message_handler(content_types=['text'],regexp = 'список|Cписок преподавателей🧾|Список')
+@bot.message_handler(content_types=['text'], regexp='список|Cписок преподавателей🧾|Список')
 def spisok(message) -> None:
     '''
         Функция, на которую выдает список учителей .
@@ -120,8 +128,9 @@ def spisok(message) -> None:
     except:
         return 'error'
 
+
 @bot.message_handler(commands=['ploshad'])
-@bot.message_handler(content_types=['text'], regexp = 'площадка')
+@bot.message_handler(content_types=['text'], regexp='площадка')
 def ploshad(message) -> None:
     '''
         Функция, на которую выдает список платформ .
@@ -133,8 +142,9 @@ def ploshad(message) -> None:
     except:
         return 'error'
 
+
 @bot.message_handler(commands=['profile'])
-@bot.message_handler(content_types=['text'], regexp = 'вшэ|профиль|проф')
+@bot.message_handler(content_types=['text'], regexp='вшэ|профиль|проф')
 def profile(message) -> None:
     '''
         Функция, на которую выдает сайт с  преподваталеями .
@@ -147,9 +157,11 @@ def profile(message) -> None:
     except:
         return 'error'
 
+
 @bot.message_handler()
 def error(message):
     bot.send_message(
-                message.chat.id, "\nНу тут мои полномочия все \n тут уж извините, но все ")
+        message.chat.id, "\nНу тут мои полномочия все \n тут уж извините, но все ")
+
 
 bot.polling()
