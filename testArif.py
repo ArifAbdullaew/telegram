@@ -121,3 +121,6 @@ class telegrambot_test(unittest.TestCase):
             self.assertRegex(m, text)
         except:
             self.assertFalse(True)
+            
+            
+    if __name__ == '__main__'
